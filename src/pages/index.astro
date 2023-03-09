@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Menu from '../components/Menu.astro';
+import ConfigurableSection from '../components/ConfigurableSection.astro';
+import Card from '../components/Card.astro';
+import WhatCard from '../components/WhatCard.astro';
+
+---
+
+<Layout title="Welcome to Astro.">
+	<!-- <Menu /> -->
+
+	<main>
+		<ConfigurableSection 
+			classes="bg-yellow-500"
+			id="wip"
+		>
+            <img
+                src="/assets/logo.png"
+                class="h-10 mr-3 sm:h-13"
+                alt="Bongotours Logo"
+            />
+			<p>Actualmente la web se encuentra en construccion, contactanos a traves de inmaacr@hotmail.com</p>
+		</ConfigurableSection>
+	</main>
+</Layout>
+
+<style lang="scss" is:global>
+	@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+	@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Rock+Salt&display=swap');
+
+	* {
+		box-sizing: border-box;
+		font-family: 'Open Sans', sans-serif;
+	}
+
+	main {
+		margin: auto;
+		padding: 0;
+	}
+
+	h1 {
+		font-size: 6rem;
+	}
+
+	h2 {
+		color: white;
+	}
+
+	h3 {
+		font-size: 4rem;
+		margin-bottom: 5rem;
+		font-family: 'Rock Salt', cursive;
+	}
+
+	#home {
+		height: 80vh;
+		background-image: url('/assets/tomas-malik-1Ya-_vXJC8Q-unsplash.jpg');
+		background-size: cover;
+		background-position: 0 70%;
+
+		h1 {
+			color: white;
+		}
+	}
+
+	#contact {
+		padding: 2rem;
+		color: white;
+	}
+</style>

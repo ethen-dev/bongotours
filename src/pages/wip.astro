@@ -1,0 +1,124 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Menu from '../components/Menu.astro';
+import ConfigurableSection from '../components/ConfigurableSection.astro';
+import Card from '../components/Card.astro';
+import WhatCard from '../components/WhatCard.astro';
+
+---
+
+<Layout title="Welcome to Astro.">
+	<Menu />
+
+	<main>
+		<ConfigurableSection 
+			id="home" 
+			useFullHeight={true}
+			useColumns={true}
+		>
+			<h1>Bongo tours</h1>
+			<h2>Visita Marruecos y su belleza incomparable con nosotros, un vaije 100% a tu medida.</h2>
+		</ConfigurableSection>
+		<ConfigurableSection 
+			id="what"
+			useColumns={true}
+			classes="bg-yellow-500"
+		>
+			<h3 class="text-white">Tours a medida</h3>
+
+			<p class="max-w-[1080px] text-zinc-50 text-lg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores at temporibus, accusamus aperiam mollitia nihil quae sunt ipsa aliquam ducimus voluptate sed iste libero harum natus laboriosam excepturi cumque aspernatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium magni iusto nulla aperiam perferendis facere voluptatem ipsam eum numquam! Illo blanditiis necessitatibus officiis explicabo alias rerum molestiae, sit amet! Est?</p>
+
+			<p class="max-w-[1080px] mt-10 text-zinc-50">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores at temporibus, accusamus aperiam mollitia nihil quae sunt ipsa aliquam ducimus voluptate sed iste libero harum natus laboriosam excepturi cumque aspernatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium magni iusto nulla aperiam perferendis facere voluptatem ipsam eum numquam! Illo blanditiis necessitatibus officiis explicabo alias rerum molestiae, sit amet! Est?</p>
+			<ul class="grid grid-cols-1 w-full md:grid-cols-2 lg:grid-cols-4 md:w-full max-w-[1280px] gap-2 mt-20">
+				<WhatCard/>
+				<WhatCard/>
+				<WhatCard/>
+				<WhatCard/>
+			</ul>
+		</ConfigurableSection>
+		<ConfigurableSection 
+			id="who"
+			useColumns={true}
+			useFullHeight={false}
+		>
+			<h3>Quienes somos?</h3>
+			<ul class="grid grid-cols-1 w-full md:grid-cols-2 md:w-full max-w-[1280px]">
+				<Card/>
+				<Card/>
+			</ul>
+		</ConfigurableSection>
+		<ConfigurableSection 
+			id="why"
+			useColumns={true}
+			classes="bg-yellow-500"
+		>
+			<h3 class="text-zinc-50">Valores Bongo Tours</h3>
+			<p class="max-w-[1080px] text-zinc-50 text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus veritatis repellendus laboriosam aut tenetur? A, aliquam iste? Deserunt voluptatum, dolorum sit accusamus ratione numquam ut sunt, quae voluptatibus dolores omnis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eligendi magni eos earum expedita quos cumque blanditiis repellat quis odit illo, est aliquid, quibusdam alias repellendus, impedit mollitia adipisci voluptas.</p>
+
+			<p class="max-w-[1080px] text-zinc-50 text-lg mt-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus veritatis repellendus laboriosam aut tenetur? A, aliquam iste? Deserunt voluptatum, dolorum sit accusamus ratione numquam ut sunt, quae voluptatibus dolores omnis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eligendi magni eos earum expedita quos cumque blanditiis repellat quis odit illo, est aliquid, quibusdam alias repellendus, impedit mollitia adipisci voluptas.</p>
+		</ConfigurableSection>
+		
+		<ConfigurableSection 
+			id="how"
+			useFullHeight={false}
+			useColumns={true}
+		>
+			<h3>Tu viaje ideal</h3>
+			<p class="max-w-[1080px] text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus veritatis repellendus laboriosam aut tenetur? A, aliquam iste? Deserunt voluptatum, dolorum sit accusamus ratione numquam ut sunt, quae voluptatibus dolores omnis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eligendi magni eos earum expedita quos cumque blanditiis repellat quis odit illo, est aliquid, quibusdam alias repellendus, impedit mollitia adipisci voluptas.</p>
+
+			<p class="max-w-[1080px] text-lg mt-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus veritatis repellendus laboriosam aut tenetur? A, aliquam iste? Deserunt voluptatum, dolorum sit accusamus ratione numquam ut sunt, quae voluptatibus dolores omnis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eligendi magni eos earum expedita quos cumque blanditiis repellat quis odit illo, est aliquid, quibusdam alias repellendus, impedit mollitia adipisci voluptas.</p>
+		</ConfigurableSection>
+		<ConfigurableSection 
+			classes="bg-yellow-500"
+			id="contact"
+		>
+			<p>No lo pienses mas y contacta con nosotros en aqui@bongotours.com</p>
+		</ConfigurableSection>
+	</main>
+</Layout>
+
+<style lang="scss" is:global>
+	@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+	@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Rock+Salt&display=swap');
+
+	* {
+		box-sizing: border-box;
+		font-family: 'Open Sans', sans-serif;
+	}
+
+	main {
+		margin: auto;
+		padding: 0;
+	}
+
+	h1 {
+		font-size: 6rem;
+	}
+
+	h2 {
+		color: white;
+	}
+
+	h3 {
+		font-size: 4rem;
+		margin-bottom: 5rem;
+		font-family: 'Rock Salt', cursive;
+	}
+
+	#home {
+		height: 80vh;
+		background-image: url('/assets/tomas-malik-1Ya-_vXJC8Q-unsplash.jpg');
+		background-size: cover;
+		background-position: 0 70%;
+
+		h1 {
+			color: white;
+		}
+	}
+
+	#contact {
+		padding: 2rem;
+		color: white;
+	}
+</style>

@@ -1,0 +1,33 @@
+---
+const { useColumns, id, useFullHeight, classes } = Astro.props;
+---
+
+<section
+    id={id}
+    class:list={[
+        'configurable-section md:p-10',
+        { 'configurable-section--column': useColumns },
+        { 'configurable-section--full-height': useFullHeight },
+        classes
+    ]}
+>
+    <slot />
+</section>
+
+<style lang="scss">
+    .configurable-section {
+        padding: 5rem 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--full-height {
+            height: 100vh;
+        }
+
+        &--column {
+            flex-direction: column;
+        }
+    }
+</style>
+
